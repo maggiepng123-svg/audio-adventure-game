@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Audio Adventure</title>
+    <meta
+      name="description"
+      content="Accessible audio-based adventure game for visually impaired players."
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="game-shell">
+      <header class="topbar">
+        <h1>Audio Adventure</h1>
+        <p class="subtitle">Keyboard-only, audio-first game</p>
+      </header>
+
+      <section class="game-panel" aria-live="polite" aria-atomic="true">
+        <div id="screen-reader-announce" class="sr-only" aria-live="assertive"></div>
+
+        <div id="scene" class="scene" tabindex="0" aria-label="Game story area">
+          <p id="description">Welcome to the game.</p>
+        </div>
+
+        <div class="controls">
+          <h2>Controls</h2>
+          <ul>
+            <li>W/A/S/D or Arrow keys: move</li>
+            <li>L: look around</li>
+            <li>I: inventory</li>
+            <li>H: help</li>
+            <li>T: take item</li>
+            <li>U: use item</li>
+            <li>Q: quit</li>
+          </ul>
+        </div>
+
+        <div class="status-box">
+          <p><strong>Room:</strong> <span id="room-name">Start</span></p>
+          <p><strong>Inventory:</strong> <span id="inventory">Empty</span></p>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
